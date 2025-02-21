@@ -1,13 +1,42 @@
 {
-  "position": "top",
-  "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["hyprland/window"],
-  "modules-right": ["network", "pulseaudio", "battery", "clock"],
-  "clock": {
-    "format": "<span foreground='#f5c2e7'>   </span>{:%a %d %H:%M}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
-  },
-  "battery": {
+    "layer": "top", 
+    "position": "top",
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["pulseaudio", "backlight", "battery", "clock", "tray", "custom/lock", "custom/power"],
+    // "wlr/workspaces": {
+    //      "disable-scroll": true,
+    //      "sort-by-name": true,
+    //      "format": " {icon} ",
+    //      "format-icons": {
+    //          "default": "",
+    //      },
+    //  },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    },
+    // "custom/music": {
+    //     "format": "  {}",
+    //     "escape": true,
+    //     "interval": 5,
+    //     "tooltip": false,
+    //     "exec": "playerctl metadata --format='{{ title }}'",
+    //     "on-click": "playerctl play-pause",
+    //     "max-length": 50
+    // },
+    "clock": {
+        "timezone": "Asia/Tehran",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%d/%m/%Y} ",
+        "format": "{:%H:%M} "
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "battery": {
     "states": {
       "warning": 30,
       "critical": 15
@@ -22,19 +51,22 @@
     "format-icons": ["", "", "", "", ""],
     "tooltip-format": "{time}"
   },
-  "network": {
-    "format-wifi": "<span size='13000' foreground='#f5e0dc'>  </span>{essid}",
-    "format-ethernet": "<span size='13000' foreground='#f5e0dc'>󰤭  </span> Disconnected",
-    "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "<span size='13000' foreground='#f5e0dc'>  </span>Disconnected",
-    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
-  },
-  "pulseaudio": {
-      "format": "{icon}  {volume}%",
-      "format-muted": "",
-      "format-icons": {
-          "default": ["", "", " "]
-      },
-      "on-click": "pavucontrol"
-  }
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "default": ["", "", " "]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/lock": {
+        "tooltip": false,
+        "on-click": "hyprlock",
+        "format": "",
+    },
+    "custom/power": {
+        "tooltip": false,
+        "on-click": "wlogout &",
+        "format": "⏻"
+    }
 }

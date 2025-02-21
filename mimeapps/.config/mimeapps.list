@@ -1,0 +1,23 @@
+[Default Applications]
+inode/directory=thunar.desktop
+
+image/jpeg=feh.desktop
+image/png=feh.desktop
+image/gif=feh.desktop
+image/bmp=feh.desktop
+image/tiff=feh.desktop
+image/webp=feh.desktop
+image/svg+xml=feh.desktop
+
+text/html=zen-browser.desktop
+x-scheme-handler/http=zen-browser.desktop
+x-scheme-handler/https=zen-browser.desktop
+
+video/mp4=vlc.desktop
+video/x-msvideo=vlc.desktop
+video/x-matroska=vlc.desktop
+video/quicktime=vlc.desktop
+video/x-ms-wmv=vlc.desktop
+video/x-flv=vlc.desktop
+video/webm=vlc.desktop
+
