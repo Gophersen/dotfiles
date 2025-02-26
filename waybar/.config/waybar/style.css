@@ -22,11 +22,12 @@
 #workspaces button {
   color: @lavender;
   border-radius: 1rem;
-  padding: 0.4rem;
+  padding: 0.5rem;
 }
 
 #workspaces button.active {
-  color: @sky;
+  /* color: @sky; */
+  color: @red;
   border-radius: 1rem;
 }
 
