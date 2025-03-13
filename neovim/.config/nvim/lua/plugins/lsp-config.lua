@@ -26,6 +26,11 @@ return {
 			lspconfig.lua_ls.setup({})
 			lspconfig.ruff.setup({
 				capabilities = capabilities,
+        settings = {
+          ruff = {
+            interpreter = { ".venv/bin/python" }
+          }
+        }
 			})
 
 			lspconfig.pylsp.setup({

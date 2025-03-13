@@ -3,7 +3,14 @@
     "position": "top",
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["pulseaudio", "custom/microphone", "backlight", "battery", "clock", "tray", "custom/lock", "custom/power"],
+    "modules-right": ["hyprland/language", "pulseaudio", "custom/microphone", "backlight", "battery", "clock", "tray", "custom/lock", "custom/power"],
+    "hyprland/language": {
+      "format": "✎ {}",
+      "format-en": "US",
+      "format-fa": "IR",
+      "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
+      "tooltip": false
+    },
     "custom/microphone": {
       "exec": "~/.config/waybar/scripts/microphone.sh",
       "return-type": "json",
