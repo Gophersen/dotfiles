@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Oblivion
 Comment=Cloudflare Warp
-Exec=/home/mohsen/Apps/oblivion-desktop/oblivion-desktop
+Exec=/home/mohsen/Apps/oblivion/oblivion-desktop
 Icon=oblivion
 Terminal=false
 Type=Application
