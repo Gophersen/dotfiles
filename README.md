@@ -6,13 +6,13 @@
  core:
  - yay AUR
  ```bash
-sudo pacman -S git base-devel curl stow linux-headers flatpak
+sudo pacman -S git base-devel curl stow linux-headers flatpak thunar qt5-wayland qt6-wayland
 yay -S ttf-cascadia-code-nerd
  ```
 
  hyprland:
  ```bash
-sudo pacman -S hyprland kitty wofi waybar hyprpaper hyprlock swaync hypridle
+sudo pacman -S hyprland kitty wofi waybar hyprpaper hyprlock swaync hypridle xdg-desktop-portal-hyprland
 yay -S wlogout hyprshot nwg-look
  ```
 
