@@ -6,7 +6,7 @@
  core:
  - yay AUR
  ```bash
-sudo pacman -S git base-devel curl stow linux-headers flatpak thunar qt5-wayland qt6-wayland
+sudo pacman -S git base-devel curl stow linux-headers flatpak thunar qt5-wayland qt6-wayland vlc feh
 yay -S ttf-cascadia-code-nerd
  ```
 
