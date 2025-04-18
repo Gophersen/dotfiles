@@ -37,16 +37,48 @@ return {
       "LazyGitFilter",
       "LazyGitFilterCurrentFile",
     },
-    -- optional for floating window border decoration
     dependencies = {
       "nvim-lua/plenary.nvim",
     },
-    -- setting the keybinding for LazyGit with 'keys' is recommended in
-    -- order to load the plugin when the command is run for the first time
     keys = {
       { "<leader>gg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
     },
   },
 
   { import = "nvchad.blink.lazyspec" },
+
+  {
+    "mfussenegger/nvim-dap",
+    config = function()
+      require "configs.dap"
+    end,
+  },
+
+  {
+    "nvim-neotest/nvim-nio",
+  },
+
+  {
+    "rcarriga/nvim-dap-ui",
+    dependencies = {
+      "mfussenegger/nvim-dap",
+      "nvim-neotest/nvim-nio",
+    },
+    config = function()
+      require "configs.dap-ui"
+    end,
+  },
+
+  {
+    "mfussenegger/nvim-dap-python",
+    ft = "python",
+    dependencies = {
+      "mfussenegger/nvim-dap",
+      "rcarriga/nvim-dap-ui",
+    },
+    collectgarbageonfig = function()
+      require "configs.dap-python"
+    end,
+  },
+
 }
